@@ -15,7 +15,7 @@ import Adafruit_MCP3008         # Import Adafruit_MCP3008
 # Set the following variable to either HW or SW for Hardware SPI and Software
 # SPI respectivly.
 SPI_TYPE = 'HW'
-dly = .5         # Delay of 1000ms (1 second)
+dly = .6        # Delay of 1000ms (1 second)
 
 # Software SPI Configuration
 #CLK     = 18    # Set the Serial Clock pin
