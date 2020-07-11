@@ -18,10 +18,10 @@ SPI_TYPE = 'HW'
 dly = .5         # Delay of 1000ms (1 second)
 
 # Software SPI Configuration
-CLK     = 18    # Set the Serial Clock pin
-MISO    = 23    # Set the Master Input/Slave Output pin
-MOSI    = 24    # Set the Master Output/Slave Input pin
-CS      = 25    # Set the Slave Select
+#CLK     = 18    # Set the Serial Clock pin
+#MISO    = 23    # Set the Master Input/Slave Output pin
+#MOSI    = 24    # Set the Master Output/Slave Input pin
+#CS      = 25    # Set the Slave Select
 
 # Hardware SPI Configuration
 HW_SPI_PORT = 0 # Set the SPI Port. Raspi has two.
