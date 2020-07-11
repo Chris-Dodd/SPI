@@ -14,7 +14,7 @@ import Adafruit_MCP3008         # Import Adafruit_MCP3008
 # use regular GPIO pins. Hardware SPI uses the SPI pins on the Raspberry PI
 # Set the following variable to either HW or SW for Hardware SPI and Software
 # SPI respectivly.
-SPI_TYPE = 'HW'
+SPI_TYPE = 'SW'
 dly = .6        # Delay of 1000ms (1 second)
 
 # Software SPI Configuration
