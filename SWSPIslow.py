@@ -9,13 +9,19 @@ import sys                      # Import sys module
 from time import sleep          # Import sleep from time
 import Adafruit_GPIO.SPI as SPI # Import Adafruit GPIO_SPI Module
 import Adafruit_MCP3008         # Import Adafruit_MCP3008
+import time
+import datetime
+from firebase import firebase
+
+# Initialize firebase (need to put in our link)
+firebase = firebase.FirebaseApplication('https://plantmonitor-723b4.firebaseio.com/',None)
 
 # We can either use Software SPI or Hardware SPI. For software SPI we will
 # use regular GPIO pins. Hardware SPI uses the SPI pins on the Raspberry PI
 # Set the following variable to either HW or SW for Hardware SPI and Software
 # SPI respectivly.
 SPI_TYPE = 'SW'
-dly = .6        # Delay of 1000ms (1 second)
+dly = 1        # Delay of 1000ms (1 second)
 
 # Software SPI Configuration
 CLK     = 18    # Set the Serial Clock pin
@@ -48,9 +54,11 @@ try:
     while True:
         # Read the value from the MCP3008 on the pin we specified in analogPort
         val = mcp.read_adc(analogPort)
-
         # print out the value
         print val
+        print "please updating db"
+        firebase.put('plantmonitor-723b4', 'value', str(val))
+        sleep(1)
 
         # Sleep for dly
         sleep(dly)
