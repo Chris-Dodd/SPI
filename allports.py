@@ -43,10 +43,10 @@ while True:
         # The read_adc function will get the value of the specified channel (0-7).
         values[i] = mcp.read_adc(i)
         if(i==3): #Put capacitive water sensor into ADC port 3
-            firebase.put('plantmonitor-723b4', 'Capactive moistore', str(values[i]))
+            firebase.put('plantmonitor-723b4', 'Capactive moisture', str(values[i]))
 
         if (i==7): #ie port 7
-            firebase.put('plantmonitor-723b4', 'Pot meter', str(values[i]))
+            firebase.put('plantmonitor-723b4', 'Beers Jugged', str(values[i]))
 
 
     # Print the ADC values.
