@@ -15,7 +15,7 @@ import Adafruit_MCP3008         # Import Adafruit_MCP3008
 import time
 import datetime
 from firebase import firebase
-from google.cloud import firestore
+
 
 
 
