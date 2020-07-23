@@ -17,7 +17,7 @@ import datetime
 from firebase import firebase
 
 
-firebase = firebase.FirebaseApplication('https://plantmonitor-723b4.firebaseio.com/',None)
+firebase = firebase.FirebaseApplication('https://plantmonitor-723b4.com/',None)
 firebase.put('plantmonitor-723b4', 'Please Work', 'please the lord')
 
 # Software SPI configuration:
