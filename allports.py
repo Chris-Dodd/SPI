@@ -15,9 +15,11 @@ import Adafruit_MCP3008         # Import Adafruit_MCP3008
 import time
 import datetime
 from firebase import firebase
+from google.cloud import firestore
 
 
-firebase = firebase.FirebaseApplication('https://plantmonitor-723b4.com/',None)
+
+firebase = firebase.FirebaseApplication('plantmonitor-723b4',None)
 firebase.put('plantmonitor-723b4', 'Please Work', 'please the lord')
 
 # Software SPI configuration:
