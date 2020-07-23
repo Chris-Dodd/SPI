@@ -23,7 +23,7 @@ from firebase_admin import firestore
 # Use the application default credentials
 cred = credentials.ApplicationDefault()
 firebase_admin.initialize_app(cred, {
-  'projectId': plantmonitor-723b4,
+  'plantmonitor-723b4': project_id,
 })
 
 db = firestore.client()
