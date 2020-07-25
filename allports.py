@@ -62,8 +62,8 @@ while True:
      for i in range(8):
          # The read_adc function will get the value of the specified channel (0-7).
          values[i] = mcp.read_adc(i)
-         if(i==3): #Put capacitive water sensor into ADC port 3
-             doc_ref.set({u'HW humidity': str(values[i])})
+         if(i==3): #Put capacitive water sensor into ADC port 3 
+            doc_ref.set({u'HW humidity': values[i]})
 
         
 
