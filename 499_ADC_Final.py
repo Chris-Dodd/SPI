@@ -115,10 +115,12 @@ Then a for loop goes through the values array and sends the appropriate pin
 value with a corresponding label to the correct plant in firebase
 '''
 
+print('Reading ADC values')
+print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*range(8)))
+
 while True:
     # Read all the ADC channel values in a list.
-     print('Reading ADC values')
-     print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*range(8)))
+
      values = [0]*8
      for i in range(8):
          # The read_adc function will get the value of the specified channel (0-7).
@@ -134,7 +136,7 @@ while True:
             doc_ref0.set({u'humidity': vt0})
 
 
-            
+
             print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*values))
             # Pause for half a second.
             time.sleep(2)
