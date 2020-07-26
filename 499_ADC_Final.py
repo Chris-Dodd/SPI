@@ -126,7 +126,11 @@ while True:
             #Will scale using: T = (Tmax - Tmin) * Tread / 1023), for 10 bit read_adc
             vt0 = values[i] *[(100)/1023]
             doc_ref0.set({u'humidity': vt0})
-'''
+        print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*values))
+            # Pause for half a second.
+
+        time.sleep(2)
+            '''
         if(i==1): #Moisture for plant0
          #The Moisture sensor range is from 0 - 100
          #Will scale using: M = (Mmax - Mmin) * Mread / 1023), for 10 bit read_adc
@@ -151,12 +155,6 @@ while True:
          if(i==7): #EC for plant1
             vt7 = values[i] *[(100)/1023]
             doc_ref1.set({u'EC': vt7})
+            '''
 
-'''
-
-
-
-     # Print the ADC values.
-     print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*values))
-     # Pause for half a second.
-     time.sleep(2)
+     
