@@ -126,7 +126,7 @@ while True:
             #Will scale using: T = (Tmax - Tmin) * Tread / 1023), for 10 bit read_adc
             vt0 = values[i] *[(100)/1023]
             doc_ref0.set({u'humidity': vt0})
-        '''
+'''
         if(i==1): #Moisture for plant0
          #The Moisture sensor range is from 0 - 100
          #Will scale using: M = (Mmax - Mmin) * Mread / 1023), for 10 bit read_adc
@@ -152,7 +152,7 @@ while True:
             vt7 = values[i] *[(100)/1023]
             doc_ref1.set({u'EC': vt7})
 
-        '''
+'''
 
 
 
