@@ -121,10 +121,12 @@ while True:
      for i in range(8):
          # The read_adc function will get the value of the specified channel (0-7).
          values[i] = mcp.read_adc(i)
+         print(values)
          if(i==0): #Temperature for plant0
             #For the temperature sensor range is from 0 - 100 degrees Celsius
             #Will scale using: T = (Tmax - Tmin) * Tread / 1023), for 10 bit read_adc
             vt0 = values[i] *[(100)/1023]
+            print(values[i])
             print(vt0)
             doc_ref0.set({u'humidity': vt0[1]})
             print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*values))
