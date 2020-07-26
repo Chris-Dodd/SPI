@@ -136,13 +136,13 @@ while True:
          # The read_adc function will get the value of the specified channel (0-7).
          values[i] = mcp.read_adc(i)
          if(i==0): #Temperature for plant0
-            doc_ref1.set({u'Temperature': values[i]})
+            doc_ref0.set({u'Temperature': values[i]})
          if(i==1): #Moisture for plant0
-            doc_ref1.set({u'Moisture': values[i]})
+            doc_ref0.set({u'Moisture': values[i]})
          if(i==2): #PH for plant0
-            doc_ref1.set({u'PH': values[i]})
+            doc_ref0.set({u'PH': values[i]})
          if(i==3): #EC for plant0
-            doc_ref1.set({u'EC': values[i]})
+            doc_ref0.set({u'EC': values[i]})
          if(i==4): #Temperature for plant1
             doc_ref1.set({u'Temperature': values[i]})
          if(i==5): #Moisture for plant1
@@ -151,12 +151,13 @@ while True:
             doc_ref1.set({u'PH': values[i]})
          if(i==7): #EC for plant1
             doc_ref1.set({u'EC': values[i]})
+            
+        time.sleep(1)
+            
 
-
-
-
+    
 
      # Print the ADC values.
      print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*values))
      # Pause for half a second.
-     time.sleep(0.5)
+     time.sleep(1)
