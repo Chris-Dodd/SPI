@@ -125,7 +125,8 @@ while True:
             #For the temperature sensor range is from 0 - 100 degrees Celsius
             #Will scale using: T = (Tmax - Tmin) * Tread / 1023), for 10 bit read_adc
             vt0 = values[i] *[(100)/1023]
-            doc_ref0.set({u'humidity': vt0[0]})
+            print(vt0)
+            doc_ref0.set({u'humidity': vt0[1]})
             print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*values))
             # Pause for half a second.
             time.sleep(2)
