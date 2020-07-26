@@ -102,10 +102,10 @@ PH(plant_1)          - pin6 on MCP3008
 EC(plant_1)          - pin7 on MCP3008
 Remember that doc_ref0 = plant0, doc_ref1 = plant1 and so on.
 '''
-print('Reading MCP3008 values, press Ctrl-C to quit...')
+#print('Reading MCP3008 values, press Ctrl-C to quit...')
 # Print nice channel column headers.
-print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*range(8)))
-print('-' * 57)
+#print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*range(8)))
+#print('-' * 57)
 
 '''
 The following While loop is what reads the values and prints it to Firebase.
@@ -132,12 +132,13 @@ while True:
 
             vt0 = values[i] * 100/1023
             vt0 = int(vt0)
+
             print('Humidity reading from MCP3008 Pin0:  ', vt0)
             doc_ref0.set({u'humidity': vt0})
 
 
 
-            print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*values))
+            #print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*values))
             # Pause for half a second.
             time.sleep(2)
             '''
