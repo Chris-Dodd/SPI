@@ -129,6 +129,7 @@ while True:
             print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*values))
             # Pause for half a second.
             time.sleep(2)
+            end
             '''
         if(i==1): #Moisture for plant0
          #The Moisture sensor range is from 0 - 100
