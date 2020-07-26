@@ -125,8 +125,9 @@ while True:
          if(i==0): #Temperature for plant0
             #For the temperature sensor range is from 0 - 100 degrees Celsius
             #Will scale using: T = (Tmax - Tmin) * Tread / 1023), for 10 bit read_adc
-            vt0 = values[i] *((100)/1023)
+
             print(values[i])
+            vt0 = values[i] * 100/1023
             print(type(vt0))
             print(vt0)
             vt0 = int(vt0)
