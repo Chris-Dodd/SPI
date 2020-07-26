@@ -45,11 +45,11 @@ Checking if there is data, if there is format to dictionary, if not throw
 an exception
 '''
 
-try:
-    docs = doc_ref.get()
-    print(u'Doc Data:{}'.format(docs.to_dict()))
-except google.cloud.exceptions.NotFound:
-    print(u'Missing data')
+#try:
+    #docs = doc_ref.get()
+    #print(u'Doc Data:{}'.format(docs.to_dict()))
+#except google.cloud.exceptions.NotFound:
+    #print(u'Missing data')
 
 '''
 At this point the Firestore is configured and ready to accept data for the
