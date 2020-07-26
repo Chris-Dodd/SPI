@@ -152,7 +152,7 @@ while True:
          if(i==7): #EC for plant1
             doc_ref1.set({u'EC': values[i]})
             
-        time.sleep(1)
+         time.sleep(1)
             
 
     
