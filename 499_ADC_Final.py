@@ -125,13 +125,14 @@ while True:
          # The read_adc function will get the value of the specified channel (0-7).
          values[i] = mcp.read_adc(i)
 
-         if(i==0): #Temperature for plant0
-            #For the temperature sensor range is from 0 - 100 degrees Celsius
-            #Will scale using: T = (Tmax - Tmin) * Tread / 1023), for 10 bit read_adc
+         if(i==0): #Moisture for plant0
+            #For the temperature sensor range is from 0 - 100
+            #Will scale using: Moisture = (Mmax - Mmin) * Msensor / 1023), for 10 bit read_adc
 
 
             vt0 = values[i] * 100/1023
             vt0 = int(vt0)
+            print('Humidity reading from MCP3008 Pin0:  ', vt0)
             doc_ref0.set({u'humidity': vt0})
 
 
