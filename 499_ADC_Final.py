@@ -128,7 +128,7 @@ while True:
             vt0 = values[i] *((100)/1023)
             print(values[i])
             print(type(vt0))
-            doc_ref0.set({u'humidity': vt0})
+            doc_ref0.set({u'humidity': 6969})
             print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*values))
             # Pause for half a second.
             time.sleep(2)
