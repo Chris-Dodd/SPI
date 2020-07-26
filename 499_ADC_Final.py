@@ -125,12 +125,14 @@ while True:
             #For the temperature sensor range is from 0 - 100 degrees Celsius
             #Will scale using: T = (Tmax - Tmin) * Tread / 1023), for 10 bit read_adc
             vt0 = values[i] *[(100)/1023]
-            doc_ref0.set({u'Temperature': vt0})
-         if(i==1): #Moisture for plant0
+            doc_ref0.set({u'humidity': vt0})
+        '''
+        if(i==1): #Moisture for plant0
          #The Moisture sensor range is from 0 - 100
          #Will scale using: M = (Mmax - Mmin) * Mread / 1023), for 10 bit read_adc
             vt1 = values[i] *[(100)/1023]
-            doc_ref0.set({u'Moisture': vt1})
+            doc_ref0.set({u'humidiy: vt1})
+
          if(i==2): #PH for plant0]
             vt2 = values[i] * [14/1023]
             doc_ref0.set({u'PH': vt2})
@@ -150,11 +152,11 @@ while True:
             vt7 = values[i] *[(100)/1023]
             doc_ref1.set({u'EC': vt7})
 
-
+        '''
 
 
 
      # Print the ADC values.
      print('| {0:>4} | {1:>4} | {2:>4} | {3:>4} | {4:>4} | {5:>4} | {6:>4} | {7:>4} |'.format(*values))
      # Pause for half a second.
-     time.sleep(1)
+     time.sleep(2)
